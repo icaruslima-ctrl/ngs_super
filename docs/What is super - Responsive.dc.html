@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="width:100%; min-height:100vh">
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <dc-import name="What is super - Mobile" hint-size="390px,100%"></dc-import>
+  </sc-if>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <dc-import name="What is super" hint-size="100%,100%"></dc-import>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mobileBreakpoint&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1280,&quot;min&quot;:480,&quot;max&quot;:1600,&quot;step&quot;:20,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1440 };
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
+  renderVals() {
+    const bp = this.props.mobileBreakpoint ?? 1280;
+    const mobile = this.state.w <= bp;
+    return { isMobile: mobile, isDesktop: !mobile };
+  }
+}
+</script>
+</body>
+</html>
