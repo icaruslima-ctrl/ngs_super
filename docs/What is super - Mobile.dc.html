@@ -19,7 +19,6 @@
   a { color: #2f9e4f; }
   a:hover { color: #1f7c3c; }
   p { text-wrap: pretty; }
-  .hide-sb::-webkit-scrollbar { display: none; }
 </style>
 </helmet>
 <div style="{{ shellStyle }}">
@@ -76,8 +75,8 @@
 
   <p style="margin:22px 20px 0; font-size:16px; line-height:1.5; color:#2b3a35">Superannuation (super) is a mandatory system in which a portion of your income is put aside to save for your retirement. <a href="#" style="color:#2b3a35; text-decoration:underline" style-hover="color:#2f9e4f; text-decoration:underline">Super</a> is designed so you accumulate savings while you're working and have flexible income options as you transition to retirement and through retirement itself.</p>
 
-  <div class="hide-sb" style="display:flex; gap:14px; margin-top:2px; padding:30px 20px 4px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none">
-    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+  <div style="display:flex; flex-direction:column; gap:28px; margin-top:2px; padding:30px 20px 4px">
+    <div style="background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; display:flex; flex-direction:column">
       <div style="position:relative; background:#fce9ea; padding:24px 108px 0 20px; min-height:92px">
         <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">While you're working</h3>
         <img src="assets/icon-working.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
@@ -90,7 +89,7 @@
       </div>
     </div>
 
-    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+    <div style="background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; display:flex; flex-direction:column">
       <div style="position:relative; background:#f5f8d9; padding:24px 108px 0 20px; min-height:92px">
         <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">Transition to retirement</h3>
         <img src="assets/icon-transition.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
@@ -103,7 +102,7 @@
       </div>
     </div>
 
-    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+    <div style="background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; display:flex; flex-direction:column">
       <div style="position:relative; background:#e3f2e7; padding:24px 108px 0 20px; min-height:92px">
         <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">In retirement</h3>
         <img src="assets/icon-in-retirement.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
@@ -115,12 +114,6 @@
         <a href="#" style="display:inline-flex; align-items:center; gap:10px; border:1.5px solid #17453a; background:#ffffff; color:#17453a; text-decoration:none; font-size:13px; font-weight:600; padding:11px 20px; border-radius:999px; white-space:nowrap" style-hover="background:#f2f7f3; color:#17453a">Learn more <img src="assets/arrow.svg" alt="" style="width:15px; height:13px; display:block" /></a>
       </div>
     </div>
-  </div>
-
-  <div style="display:flex; justify-content:center; gap:7px; margin-top:18px">
-    <div style="width:7px; height:7px; border-radius:50%; background:#2f9e4f"></div>
-    <div style="width:7px; height:7px; border-radius:50%; background:#c3d9c9"></div>
-    <div style="width:7px; height:7px; border-radius:50%; background:#c3d9c9"></div>
   </div>
 
   <div style="height:1px; background:#e2e8e4; margin:30px 34px 0"></div>
