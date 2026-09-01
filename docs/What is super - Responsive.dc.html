@@ -17,14 +17,14 @@
 </helmet>
 <div style="width:100%; min-height:100vh">
   <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-    <dc-import name="What is super - Mobile" hint-size="390px,100%"></dc-import>
+    <dc-import name="What is super - Mobile" show-device-chrome="{{ chrome }}" max-width="{{ mobileMaxWidth }}" hint-size="390px,100%"></dc-import>
   </sc-if>
   <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
     <dc-import name="What is super" hint-size="100%,100%"></dc-import>
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;mobileBreakpoint&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1280,&quot;min&quot;:480,&quot;max&quot;:1600,&quot;step&quot;:20,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;mobileBreakpoint&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1280,&quot;min&quot;:480,&quot;max&quot;:1600,&quot;step&quot;:20,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showDeviceChrome&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   state = { w: typeof window !== "undefined" ? window.innerWidth : 1440 };
   componentDidMount() {
@@ -36,7 +36,12 @@ class Component extends DCLogic {
   renderVals() {
     const bp = this.props.mobileBreakpoint ?? 1280;
     const mobile = this.state.w <= bp;
-    return { isMobile: mobile, isDesktop: !mobile };
+    return {
+      isMobile: mobile,
+      isDesktop: !mobile,
+      chrome: this.props.showDeviceChrome ?? false,
+      mobileMaxWidth: 560
+    };
   }
 }
 </script>

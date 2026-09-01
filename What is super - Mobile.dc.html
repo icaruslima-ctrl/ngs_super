@@ -20,9 +20,11 @@
   .hide-sb::-webkit-scrollbar { display: none; }
 </style>
 </helmet>
-<div style="width:100%; max-width:520px; margin:0 auto; background:#ffffff; color:#2b3a35; font-size:15px; line-height:1.55; overflow-x:hidden">
+<div style="{{ shellStyle }}">
 
-  <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 22px 6px; font-size:13px; font-weight:600; color:#111111">
+  <sc-if value="{{ deviceChrome }}" hint-placeholder-val="{{ true }}">
+  <div>
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 26px 6px; font-size:17px; font-weight:600; color:#000000">
     <span>12:43</span>
     <div style="display:flex; align-items:center; gap:5px">
       <div style="display:flex; align-items:flex-end; gap:2px">
@@ -36,82 +38,79 @@
     </div>
   </div>
 
-  <div style="display:flex; align-items:center; gap:14px; padding:6px 20px 12px; color:#5c6b64">
-    <span style="font-size:15px">‹</span>
-    <div style="flex:1; text-align:center; font-size:14px; color:#2b3a35">ngssuper.com.au</div>
-    <span style="font-size:14px">⟳</span>
+  <div style="padding:8px 10px 12px">
+    <div style="display:flex; align-items:center; gap:10px; background:#e9e9eb; border-radius:999px; padding:8px 14px">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none"><path d="M11 2.5l1.4 3.6L16 7.5l-3.6 1.4L11 12.5 9.6 8.9 6 7.5l3.6-1.4L11 2.5z" fill="#5c5c60"></path><path d="M5.2 12.2l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8L2.7 14.7l1.8-.7.7-1.8z" fill="#5c5c60"></path></svg>
+      <div style="flex:1; text-align:center; font-size:16px; color:#1c1c1e">ngssuper.com.au</div>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none"><path d="M10 2.5v10M10 2.5L6.8 5.7M10 2.5l3.2 3.2" stroke="#5c5c60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.5 9H4.3v8.2h11.4V9h-1.2" stroke="#5c5c60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </div>
   </div>
+  <div style="height:1px; background:#d9d9dd"></div>
+  </div>
+  </sc-if>
 
-  <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 20px 16px; background:#ffffff">
-    <a href="#" style="text-decoration:none; display:block; line-height:0.86; letter-spacing:-0.035em">
-      <div style="font-size:19px; font-weight:800; color:#4bb462">ngs</div>
-      <div style="font-size:22px; font-weight:800; color:#17453a">Super</div>
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 20px 18px; background:#ffffff">
+    <a href="#" style="text-decoration:none; display:block; line-height:0.84; letter-spacing:-0.035em">
+      <div style="font-size:26px; font-weight:800; color:#4bb462">ngs</div>
+      <div style="font-size:31px; font-weight:800; color:#17453a">Super</div>
     </a>
-    <div style="display:flex; align-items:center; gap:20px">
-      <div style="width:17px; height:17px; border:2px solid #17453a; border-radius:50%; position:relative"><div style="position:absolute; width:2px; height:8px; background:#17453a; right:-3px; bottom:-6px; transform:rotate(-45deg)"></div></div>
-      <div style="display:flex; flex-direction:column; gap:4px; width:24px">
-        <div style="height:3px; background:#4bb462; border-radius:2px"></div>
-        <div style="height:3px; background:#4bb462; border-radius:2px"></div>
-        <div style="height:3px; background:#4bb462; border-radius:2px"></div>
+    <div style="display:flex; align-items:center; gap:24px">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="11" cy="11" r="8" stroke="#2b3a35" stroke-width="2"></circle><path d="M17 17l7 7" stroke="#2b3a35" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="display:flex; flex-direction:column; gap:5px; width:31px">
+        <div style="height:4px; background:#4bb462"></div>
+        <div style="height:4px; background:#4bb462"></div>
+        <div style="height:4px; background:#4bb462"></div>
       </div>
     </div>
   </div>
 
-  <div style="background:#e8f3e9; border-radius:0 0 22px 22px; padding:16px 20px 30px">
-    <div style="display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#2b3a35; background:#eef7ef; padding:9px 14px; border-radius:4px">
+  <div style="background:#e8f3e9; border-radius:0 0 18px 18px; padding:21px 20px 20px">
+    <div style="display:inline-flex; align-items:center; gap:7px; font-size:15px; color:#2b3a35; background:#eff7f0; padding:11px 15px; border-radius:4px">
       <a href="#" style="color:#2b3a35">Home</a><span>/</span><a href="#" style="color:#2b3a35">Super</a><span>/</span><span>What is super</span>
     </div>
-    <h1 style="margin:28px 0 0; font-size:26px; line-height:1.15; font-weight:800; color:#17453a; letter-spacing:-0.02em">What is super?</h1>
   </div>
 
-  <p style="margin:26px 20px 0; font-size:24px; line-height:1.5; color:#2b3a35">Superannuation (super) is a mandatory system in which a portion of your income is put aside to save for your retirement. <a href="#" style="color:#2b3a35; text-decoration:underline" style-hover="color:#2f9e4f; text-decoration:underline">Super</a> is designed so you accumulate savings while you're working and have flexible income options as you transition to retirement and through retirement itself.</p>
+  <h1 style="margin:38px 20px 0; font-size:27px; line-height:1.15; font-weight:800; color:#111111; letter-spacing:-0.02em">What is super?</h1>
+
+  <p style="margin:22px 20px 0; font-size:16px; line-height:1.5; color:#2b3a35">Superannuation (super) is a mandatory system in which a portion of your income is put aside to save for your retirement. <a href="#" style="color:#2b3a35; text-decoration:underline" style-hover="color:#2f9e4f; text-decoration:underline">Super</a> is designed so you accumulate savings while you're working and have flexible income options as you transition to retirement and through retirement itself.</p>
 
   <div class="hide-sb" style="display:flex; gap:14px; margin-top:2px; padding:30px 20px 4px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none">
-    <div style="flex:none; width:290px; background:linear-gradient(180deg, #fbe9e8 0%, #fdf1f0 100%); border-radius:18px; padding:20px 22px 26px; scroll-snap-align:center; display:flex; flex-direction:column">
-      <div style="position:relative; margin:-20px -22px 22px; padding:20px 108px 18px 22px; min-height:82px; display:flex; align-items:center; background:rgba(255,255,255,0.5); border-radius:18px 18px 0 16px">
-        <h3 style="margin:0; font-size:17px; line-height:1.35; font-weight:700; color:#0b3d38; max-width:150px">While you're working</h3>
-        <img src="assets/icon-working.svg" alt="" style="position:absolute; top:-24px; right:-6px; width:106px; height:106px" />
+    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+      <div style="position:relative; background:#fce9ea; padding:24px 108px 0 20px; min-height:92px">
+        <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">While you're working</h3>
+        <img src="assets/icon-working.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
       </div>
-      <div style="display:flex; flex-direction:column; gap:14px; font-size:11.5px; line-height:1.5; color:#1c1c1c">
-        <p style="margin:0">During your working life, your employer will make mandatory super contributions (known as Super Guarantee Contributions) to your superannuation. These contributions, and any <a href="#" style="color:#1c1c1c; font-weight:700; text-decoration:underline">voluntary contributions</a> you may make, are invested in your NGS Accumulation account.<br />You can choose how your super is invested, or you can leave it in the default investment option. You can access your super once you meet a 'condition of release'.</p>
-        <p style="margin:0">Most conditions of release occur around the time of your retirement.<br />For many, super will be the main source of income in retirement. So, it's a great idea to get your super savings on track as early as possible.<br />To encourage you to invest in your retirement throughout your working life, super has been set up as a tax-effective environment. Investment earnings within your super account are taxed up to 15% and tax on your super contributions may be lower than your income tax rate.</p>
+      <div style="padding:44px 20px 0; font-size:14px; line-height:1.55; color:#1c1c1c; flex:1">
+        <p style="margin:0">During your working life, your employer will make mandatory super contributions (known as Super Guarantee Contributions) to your superannuation…</p>
       </div>
-      <div style="margin-top:24px; display:flex; justify-content:center">
-        <a href="#" style="background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:13px; font-weight:700; padding:12px 28px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">How am I tracking?</a>
-      </div>
-    </div>
-
-    <div style="flex:none; width:290px; background:linear-gradient(180deg, #f6f6d6 0%, #fafae6 100%); border-radius:18px; padding:20px 22px 26px; scroll-snap-align:center; display:flex; flex-direction:column">
-      <div style="position:relative; margin:-20px -22px 22px; padding:20px 108px 18px 22px; min-height:82px; display:flex; align-items:center; background:rgba(255,255,255,0.5); border-radius:18px 18px 0 16px">
-        <h3 style="margin:0; font-size:17px; line-height:1.35; font-weight:700; color:#0b3d38; max-width:150px">Transition to retirement</h3>
-        <img src="assets/icon-transition.svg" alt="" style="position:absolute; top:-24px; right:-6px; width:106px; height:106px" />
-      </div>
-      <div style="display:flex; flex-direction:column; gap:14px; font-size:11.5px; line-height:1.5; color:#1c1c1c">
-        <p style="margin:0">Thinking about slowing your work life down but not quite ready to retire? Or looking for a tax-effective strategy to boost your retirement savings before you retire?</p>
-        <p style="margin:0">Once you've reached your preservation age (60 if you were born after 30 June 1964, but lower if you were born earlier) an NGS Transition to retirement account can help.</p>
-        <p style="margin:0">A Transition to retirement account allows you to access part of your super as income payments. Many people use this option to reduce their working hours by supplementing their work income using super.</p>
-        <p style="margin:0">You can also use a Transition to retirement account to tax-effectively build up existing super in the years leading up to retirement.</p>
-      </div>
-      <div style="margin-top:24px; display:flex; justify-content:center">
-        <a href="#" style="background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:13px; font-weight:700; padding:12px 28px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">Find out more</a>
+      <div style="padding:32px 20px 26px">
+        <a href="#" style="display:inline-flex; align-items:center; gap:10px; border:1.5px solid #17453a; background:#ffffff; color:#17453a; text-decoration:none; font-size:13px; font-weight:600; padding:11px 20px; border-radius:999px; white-space:nowrap" style-hover="background:#f2f7f3; color:#17453a">How am I tracking? <img src="assets/arrow.svg" alt="" style="width:15px; height:13px; display:block" /></a>
       </div>
     </div>
 
-    <div style="flex:none; width:290px; background:linear-gradient(180deg, #e4f2e7 0%, #f5fbf6 100%); border-radius:18px; padding:20px 22px 26px; scroll-snap-align:center; display:flex; flex-direction:column">
-      <div style="position:relative; margin:-20px -22px 22px; padding:20px 108px 18px 22px; min-height:82px; display:flex; align-items:center; background:rgba(255,255,255,0.5); border-radius:18px 18px 0 16px">
-        <h3 style="margin:0; font-size:17px; line-height:1.35; font-weight:700; color:#0b3d38; max-width:150px">In retirement</h3>
-        <img src="assets/icon-in-retirement.svg" alt="" style="position:absolute; top:-24px; right:-6px; width:106px; height:106px" />
+    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+      <div style="position:relative; background:#f5f8d9; padding:24px 108px 0 20px; min-height:92px">
+        <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">Transition to retirement</h3>
+        <img src="assets/icon-transition.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
       </div>
-      <div style="display:flex; flex-direction:column; gap:14px; font-size:11.5px; line-height:1.5; color:#1c1c1c">
-        <p style="margin:0">For many people, adjusting to life in retirement is much easier to manage if they continue to receive a steady income.</p>
-        <p style="margin:0">Once you're eligible, you can set up a regular income stream from your super by opening an Income account and receive:</p>
-        <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:12px">
-          <li>flexible payment options — choose how often and how much you'd like your payments to be.</li>
-          <li>a wide range of investment options, tax-free income payments and investment earnings (unless you're aged under 60)</li>
-        </ul>
+      <div style="padding:44px 20px 0; font-size:14px; line-height:1.55; color:#1c1c1c; flex:1">
+        <p style="margin:0">Thinking about slowing your work life down but not quite ready to retire? Or looking for a tax-effective strategy to boost your retirement savings before…</p>
       </div>
-      <div style="margin-top:24px; display:flex; justify-content:center">
-        <a href="#" style="background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:13px; font-weight:700; padding:12px 28px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">Find out more</a>
+      <div style="padding:32px 20px 26px">
+        <a href="#" style="display:inline-flex; align-items:center; gap:10px; border:1.5px solid #17453a; background:#ffffff; color:#17453a; text-decoration:none; font-size:13px; font-weight:600; padding:11px 20px; border-radius:999px; white-space:nowrap" style-hover="background:#f2f7f3; color:#17453a">Learn more <img src="assets/arrow.svg" alt="" style="width:15px; height:13px; display:block" /></a>
+      </div>
+    </div>
+
+    <div style="flex:none; width:290px; background:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(17,63,55,0.08); overflow:hidden; scroll-snap-align:center; display:flex; flex-direction:column">
+      <div style="position:relative; background:#e3f2e7; padding:24px 108px 0 20px; min-height:92px">
+        <h3 style="margin:0; font-size:17px; line-height:1.28; font-weight:700; color:#111111; max-width:140px">In retirement</h3>
+        <img src="assets/icon-in-retirement.svg" alt="" style="position:absolute; top:16px; right:6px; width:100px; height:100px" />
+      </div>
+      <div style="padding:44px 20px 0; font-size:14px; line-height:1.55; color:#1c1c1c; flex:1">
+        <p style="margin:0">For many people, adjusting to life in retirement is much easier to manage if they continue to receive a steady income. Once you're eligible, you can…</p>
+      </div>
+      <div style="padding:32px 20px 26px">
+        <a href="#" style="display:inline-flex; align-items:center; gap:10px; border:1.5px solid #17453a; background:#ffffff; color:#17453a; text-decoration:none; font-size:13px; font-weight:600; padding:11px 20px; border-radius:999px; white-space:nowrap" style-hover="background:#f2f7f3; color:#17453a">Learn more <img src="assets/arrow.svg" alt="" style="width:15px; height:13px; display:block" /></a>
       </div>
     </div>
   </div>
@@ -122,22 +121,22 @@
     <div style="width:7px; height:7px; border-radius:50%; background:#c3d9c9"></div>
   </div>
 
-  <div style="height:1px; background:#e2e8e4; margin:30px 20px 0"></div>
+  <div style="height:1px; background:#e2e8e4; margin:30px 34px 0"></div>
 
-  <div style="padding:26px 20px 34px">
-    <img src="assets/quiz-photo.png" alt="" style="display:block; width:192px; height:192px; margin:0 auto" />
-    <img src="assets/tag-pill.svg" alt="3 minute assessment" style="display:block; width:122px; height:20px; margin-top:18px" />
-    <h2 style="margin:14px 0 0; font-size:31px; line-height:1.15; font-weight:700; color:#0b3d38; letter-spacing:-0.01em">Where do you stand?<br />Take the Super Quiz</h2>
-    <img src="assets/pink-divider.svg" alt="" style="display:block; width:100%; height:10px; margin-top:12px" />
-    <p style="margin:20px 0 0; font-size:16px; line-height:1.55; color:#6b7a72">Curious about how your super stands up? Take a calm, guided journey through a few simple questions and unlock your personalised financial wellbeing dashboard.</p>
-    <a href="#" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:20px; background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:14px; font-weight:700; padding:15px 22px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">Begin the Quiz <img src="assets/arrow-white.svg" alt="" style="width:17px; height:14px; display:block" /></a>
+  <div style="padding:48px 26px 40px">
+    <img src="assets/quiz-photo.png" alt="" style="display:block; width:203px; height:203px; margin:0 auto" />
+    <img src="assets/tag-pill.svg" alt="3 minute assessment" style="display:block; width:122px; height:18px; margin-top:12px" />
+    <h2 style="margin:16px 0 0; font-size:27px; line-height:1.14; font-weight:700; color:#0b3d38; letter-spacing:-0.01em">Where do you stand?<br />Take the Super Quiz</h2>
+    <img src="assets/pink-divider.svg" alt="" style="display:block; width:100%; height:auto; margin-top:20px" />
+    <p style="margin:22px 0 0; font-size:16px; line-height:1.45; color:#1c1c1c">Curious about how your super stands up? Take a calm, guided journey through a few simple questions and unlock your personalised financial wellbeing dashboard.</p>
+    <a href="#" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:26px; background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:15px; font-weight:700; padding:14px 22px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">Begin the Quiz <img src="assets/arrow-white.svg" alt="" style="width:17px; height:14px; display:block" /></a>
   </div>
 
-  <div style="height:1px; background:#e2e8e4; margin:0 20px"></div>
+  <div style="height:1px; background:#e2e8e4; margin:0 34px"></div>
 
   <div style="padding:34px 20px 0">
     <h2 style="margin:0; font-size:28px; line-height:1.15; font-weight:700; color:#0b3d38; letter-spacing:-0.01em">6 ways to keep your super on track</h2>
-    <img src="assets/green-divider.svg" alt="" style="display:block; width:100%; height:10px; margin-top:12px" />
+    <img src="assets/green-divider.svg" alt="" style="display:block; width:100%; height:auto; margin-top:12px" />
     <p style="margin:24px 0 0; font-size:16px; line-height:1.55; color:#111111">It's important to stay on top of your super now so you're set up for your future. Think of it like a garden: put the care and consideration in now so that your super savings will grow and flourish. Don't worry if you're not sure what to do next – we've made it easy by providing all the tools you need just below.</p>
 
     <div style="display:flex; flex-direction:column; gap:30px; margin-top:30px">
@@ -156,8 +155,8 @@
 
   <div style="padding:40px 20px 34px">
     <img src="assets/lost-super-photo.png" alt="" style="display:block; width:210px; height:auto; margin:0 auto" />
-    <h2 style="margin:26px 0 0; font-size:26px; line-height:1.15; font-weight:700; color:#111111; letter-spacing:-0.01em">How to find your lost super</h2>
-    <img src="assets/green-divider-2.svg" alt="" style="display:block; width:100%; height:10px; margin-top:12px" />
+    <h2 style="margin:26px 0 0; font-size:26px; line-height:1.15; font-weight:700; color:#0b3d38; letter-spacing:-0.01em">How to find your lost super</h2>
+    <img src="assets/green-divider-2.svg" alt="" style="display:block; width:100%; height:auto; margin-top:12px" />
     <p style="margin:18px 0 0; font-size:13px; line-height:1.55; color:#3a4a43">Your superannuation is essential for ensuring you enjoy your retirement. However, it's easy to lose track of some of the super you've earned throughout your working life, especially as you move between jobs or change addresses.</p>
     <a href="#" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:20px; background:#2f9e4f; color:#ffffff; text-decoration:none; font-size:13px; font-weight:700; padding:13px 22px; border-radius:999px" style-hover="background:#1f7c3c; color:#ffffff">Find out how to find lost super <img src="assets/arrow-white.svg" alt="" style="width:17px; height:14px; display:block" /></a>
   </div>
@@ -212,10 +211,13 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:900}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:900},&quot;showDeviceChrome&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;maxWidth&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:520,&quot;min&quot;:0,&quot;max&quot;:1000,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   renderVals() {
+    const mw = this.props.maxWidth ?? 520;
     return {
+      deviceChrome: this.props.showDeviceChrome ?? true,
+      shellStyle: "width:100%; max-width:" + (mw > 0 ? mw + "px" : "none") + "; margin:0 auto; background:#ffffff; color:#2b3a35; font-size:15px; line-height:1.55; overflow-x:hidden",
       ways: [
         { title: "Update contact details", body: "Keep your contact details up-to-date so you don't miss out on anything important. NGS will only send you the things that matter.", cta: "Log in to Member Online", icon: "assets/way-1.png" },
         { title: "Check your insurance cover", body: "Check that you have the right level of insurance for your circumstances and apply to make any changes through your Member Online account.", cta: "Log in to Member Online", icon: "assets/way-2.png" },
