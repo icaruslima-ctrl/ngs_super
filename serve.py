@@ -44,23 +44,11 @@ INDEX = """<!doctype html><meta charset="utf-8">
   a.page:hover {{ border-color: #4bb462; }}
   a.page b {{ display: block; font-size: 17px; }}
   a.page span {{ color: #5c6b64; font-size: 14px; }}
-  .note {{ margin-top: 34px; padding: 16px 20px; border-radius: 12px;
-           background: #fdf6e6; border: 1px solid #ecdcae; font-size: 14px;
-           line-height: 1.6; color: #6b5a2c; }}
-  code {{ background: rgba(0,0,0,0.06); padding: 1px 5px; border-radius: 4px; }}
 </style>
 <main>
   <h1>What is super</h1>
   <p class="sub">Synced from the Claude Design project &ldquo;Like-for-like page design&rdquo;.</p>
   {links}
-  <div class="note">
-    <b>4 assets are placeholders.</b> <code>icon-working.svg</code>,
-    <code>icon-in-retirement.svg</code>, <code>quiz-photo.png</code> and
-    <code>lost-super-photo.png</code> each exceed the DesignSync 256&nbsp;KiB
-    read cap and came back truncated. Download them from the design project and
-    drop them into <code>assets/</code> to complete the build. The truncated
-    originals are kept in <code>.dcsync/truncated/</code>.
-  </div>
 </main>
 """
 
